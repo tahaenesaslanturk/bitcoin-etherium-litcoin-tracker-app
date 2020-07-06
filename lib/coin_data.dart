@@ -34,7 +34,7 @@ const List<String> cryptoList = [
 class CoinData {
   Future<dynamic> getCoinData({String currency, String base}) async {
     String url =
-        "https://rest.coinapi.io/v1/exchangerate/$base/$currency?apikey=A00D2DC9-356E-4B89-9DF2-3332AD1EEF17";
+        "https://rest.coinapi.io/v1/exchangerate/$base/$currency?apikey=(YOUR-API-KEY)";
     http.Response response = await http.get(url);
     var decodedData = jsonDecode(response.body);
     return decodedData;
